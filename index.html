@@ -18,20 +18,22 @@
         <main>
             <section class="total-display">
                 <h2>Total Spent</h2>
-                <p class="total-amount">$<span id="total">0.00</span></p>
+                <p class="total-amount"><span id="total">0</span> SUM</p>
             </section>
 
             <section class="add-expense">
                 <h2>Add New Expense</h2>
                 <form id="expense-form">
                     <input type="text" id="description" placeholder="What did you buy?" required>
-                    <input type="number" id="amount" placeholder="Amount ($)" step="0.01" min="0" required>
+                    <input type="number" id="amount" placeholder="Amount (SUM)" step="100" min="0" required>
+                    <input type="date" id="date" required>
                     <button type="submit">Add Expense →</button>
                 </form>
             </section>
 
             <section class="expense-list">
                 <h2>Recent Expenses</h2>
+                <div id="empty-state" class="empty-state">No expenses yet. Add your first expense above!</div>
                 <ul id="expenses"></ul>
             </section>
         </main>
